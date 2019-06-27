@@ -1,13 +1,176 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#background {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  transition: 0.5s all ease;
+}
+
+#filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+#quote-box {
+  width: 3000%;
+}
+
+.fade {
+  animation: fade 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+  0% {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  50% {
+    background-color: rgba(0, 0, 0, 1);
+  }
+}
+
+.scrollQ1 {
+  animation: scrollQ1 2s;
+}
+
+.scrollA1 {
+  animation: scrollA1 2s;
+}
+
+.scrollQ2 {
+  animation: scrollQ2 2s;
+}
+
+.scrollA2 {
+  animation: scrollA2 2s;
+}
+
+@keyframes scrollQ1 {
+  from {
+    color: rgba(255, 255, 255, 1);
+  }
+  to {
+    color: rgba(255, 255, 255, 0);
+    left: 0%;
+    text-shadow: none;
+  }
+}
+
+@keyframes scrollA1 {
+  from {
+    color: rgba(128, 128, 128, 1);
+  }
+  to {
+    color: rgba(128, 128, 128, 0);
+    left: 0%;
+    text-shadow: none;
+  }
+}
+
+@keyframes scrollQ2 {
+  from {
+    color: rgba(255, 255, 255, 0);
+    left: 100%;
+    text-shadow: none;
+  }
+  to {
+    color: rgba(255, 255, 255, 1);
+    left: 50%;
+  }
+}
+
+@keyframes scrollA2 {
+  from {
+    color: rgba(128, 128, 128, 0);
+    left: 100%;
+    text-shadow: none;
+  }
+  to {
+    color: rgba(128, 128, 128, 1);
+    left: 50%;
+  }
+}
+
+#got {
+  position: absolute;
+  left: 50%;
+  width: 600px;
+
+  transform: translateX(-50%);
+}
+
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: justify;
+  font-size: 35px;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  white-space: pre;
+}
+
+#text2 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  text-align: justify;
+  font-size: 35px;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  white-space: pre;
+}
+
+#author {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: rgba(128, 128, 128, 1);
+  text-shadow: 2px 2px 4px black;
+  white-space: nowrap;
+}
+
+#author2 {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: rgba(128, 128, 128, 1);
+  text-shadow: 2px 2px 4px black;
+  white-space: nowrap;
+}
+
+#new-quote {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+button {
+  margin-bottom: 30px;
 }
